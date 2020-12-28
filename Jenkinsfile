@@ -7,11 +7,11 @@ node {
         checkout scm
     }
 
-    stage('Build image 123') {
+    stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("coldfish01/hellonode")
+        app = docker.build("releaseworks/hellonode")
     }
 
     stage('Test image') {
