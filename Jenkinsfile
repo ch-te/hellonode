@@ -1,5 +1,6 @@
 node {
     def app
+    def manager = "my manager"
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -11,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("releaseworks/hellonode")
+        app = docker.build("coldfish01/hellonode")
     }
 
     stage('Test image') {
